@@ -2,21 +2,21 @@ import os
 
 
 class Directory:
-    name = ""
+    path = ""
     items = []
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, path):
+        self.path = path
 
     def __add__(self, other):
         self.items.append(other)
 
 
 class File:
-    name = ""
+    path = ""
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, path):
+        self.path = path
 
     def read(self):
         pass
