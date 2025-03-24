@@ -5,5 +5,5 @@ class Directory:
     def __init__(self, path):
         self.path = path
 
-    def __add__(self, other):
+    def __iadd__(self, other):
         self.items.append(other)

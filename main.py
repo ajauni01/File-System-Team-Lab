@@ -9,7 +9,7 @@ class FileSystem(Directory):
         pass
 
     # Allows you to do FileSystem += file/directory and it will add it to the inventory of a directory
-    def __add__(self, other):
+    def __iadd__(self, other):
         super().__add__(other)
 
     def create_file(self):
