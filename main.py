@@ -1,29 +1,25 @@
 import os
+import Directory
+import File
 
 
-class Directory:
-    path = ""
-    items = []
-
-    def __init__(self, path):
-        self.path = path
+class FileSystem(Directory):
+    def __init__(self, root_path):
+        super().__init__(root_path)
+        pass
 
     def __add__(self, other):
-        self.items.append(other)
+        super().__add__(other)
 
-
-class File:
-    path = ""
-
-    def __init__(self, path):
-        self.path = path
-
-    def read(self):
+    def create_file(self):
         pass
 
-    def write(self):
+    def delete_file(self):
         pass
+
+
 
 
 if __name__ == "__main__":
     # Driver Code
+    print("nothing")
