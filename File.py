@@ -3,6 +3,7 @@ class File:
 
     def __init__(self, path):
         self.path = path
+        open(self.path, 'x')  # Create a file at location
 
     def read(self):
         pass

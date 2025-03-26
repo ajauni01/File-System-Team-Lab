@@ -12,8 +12,7 @@ class FileSystem(Directory):
     def __iadd__(self, other):
         super().__add__(other)
 
-    def create_file(self):
-        pass
+
 
     def delete_file(self):
         pass
