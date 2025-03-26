@@ -8,4 +8,12 @@ class File:
         pass
 
     def write(self):
-        pass
+        with open(self.path, "w") as file:
+            
+            try:
+                data = input("Enter data: ")
+                file.write(data)
+            except:
+                print("Error: File cannot be written to")
+
+        print("Data has been written to file")
