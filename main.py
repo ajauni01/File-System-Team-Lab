@@ -3,10 +3,9 @@ import Directory
 import File
 
 
-class FileSystem(Directory):
+class FileSystem(Directory.Directory):
     def __init__(self, root_path):
         super().__init__(root_path)  # Initialize the root directory
-        pass
 
     # Allows you to do FileSystem += file/directory and it will add it to the inventory of a directory
     def __iadd__(self, other):
@@ -21,3 +20,6 @@ class FileSystem(Directory):
 if __name__ == "__main__":
     # Driver Code
     fs = FileSystem("root")  # root directory path is just "root"
+    
+    
+    
