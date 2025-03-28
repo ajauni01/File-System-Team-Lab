@@ -14,6 +14,7 @@ class Directory:
             
     def __iadd__(self, other):
         self.items.append(other)
+        return self
 
     def create_file(self):
         path = input("File Path: ")

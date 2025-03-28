@@ -1,16 +1,15 @@
 import os
-import Directory
-import File
+from Directory import Directory
+from File import File
 
 
-class FileSystem(Directory.Directory):
+class FileSystem(Directory):
     def __init__(self, root_path):
         super().__init__(root_path)  # Initialize the root directory
 
     # Allows you to do FileSystem += file/directory and it will add it to the inventory of a directory
     def __iadd__(self, other):
         super().__add__(other)
-
 
 
     def delete_file(self):
@@ -24,6 +23,8 @@ class FileSystem(Directory.Directory):
 if __name__ == "__main__":
     # Driver Code
     fs = FileSystem("root")  # root directory path is just "root"
+    fs.create_file()
+    
     
     
     
