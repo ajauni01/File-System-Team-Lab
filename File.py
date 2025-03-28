@@ -6,7 +6,13 @@ class File:
         open(self.path, 'x')  # Create a file at location
 
     def read(self):
-        pass
+        with open(self.path, "r") as file:
+            content = file.read()
+            if content != "":
+                print(f"Content of {self.path}: {content}")
+            else:
+                print("File is empty")
+        file.close()
 
     def write(self):
         with open(self.path, "w") as file:
