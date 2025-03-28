@@ -7,6 +7,7 @@ class FileSystem(Directory):
     def __init__(self, root_path):
         super().__init__(root_path)  # Initialize the root directory
 
+<<<<<<< Updated upstream
     # Allows you to do FileSystem += file/directory and it will add it to the inventory of a directory
     def __iadd__(self, other):
         super().__add__(other)
@@ -19,10 +20,21 @@ class FileSystem(Directory):
         else:
             print("File not found.")
 
+=======
+    def write(self):
+        index = input("Index of file: ")
+        self.items[index].write()
+>>>>>>> Stashed changes
 
+    def read(self):
+        index = input("Index of file: ")
+        self.items[index].read()
+        
 if __name__ == "__main__":
     # Driver Code
     fs = FileSystem("root")  # root directory path is just "root"
+    fs.create_file()
+    
     
     
     

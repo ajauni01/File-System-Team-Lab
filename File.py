@@ -18,6 +18,7 @@ class File:
         with open(self.path, "w") as file:
             
             try:
+                print("Enter data to write to file: ")
                 data = input("Enter data: ")
                 file.write(data)
             except:
