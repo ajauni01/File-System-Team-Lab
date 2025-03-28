@@ -14,7 +14,11 @@ class FileSystem(Directory.Directory):
 
 
     def delete_file(self):
-        pass
+        if os.path.exists(self):
+            os.remove(self)
+            print(f"File '{self}' deleted.")
+        else:
+            print("File not found.")
 
 
 if __name__ == "__main__":
